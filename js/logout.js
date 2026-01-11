@@ -1,4 +1,4 @@
 async function logout() {
-  await supabase.auth.signOut()
+  await window.supabaseClient.auth.signOut()
   window.location.href = "index.html"
 }

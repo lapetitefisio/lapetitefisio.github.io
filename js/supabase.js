@@ -1,4 +1,3 @@
-<div>
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 <script>
 const SUPABASE_URL = "https://cxxgshbnrwjapdifvnqv.supabase.co"
@@ -9,4 +8,3 @@ const supabase = supabase.createClient(
   SUPABASE_ANON_KEY
 )
 </script>
-</div>

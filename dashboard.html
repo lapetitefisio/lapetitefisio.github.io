@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Zona privada</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -12,12 +13,17 @@
 <button onclick="logout()">Cerrar sesión</button>
 
 <!-- EJEMPLO DE VIDEO -->
-<!-- <iframe width="560" height="315"
-src="https://www.youtube.com/embed/VIDEO_ID"
-allowfullscreen></iframe> -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BVnhhlKfamw?si=KuYS03liTfaPMigX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/BVnhhlKfamw"
+allowfullscreen></iframe>
 
+<!-- 1️⃣ Librería Supabase -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+<!-- 2️⃣ Conectar con tu proyecto Supabase -->
 <script src="js/supabase.js"></script>
+
+<!-- 3️⃣ Funciones de la página -->
 <script src="js/guard.js"></script>
 <script src="js/logout.js"></script>
 

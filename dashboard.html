@@ -4,110 +4,127 @@
   <meta charset="UTF-8">
   <title>Zona privada</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Estilos para centrar todo el cuerpo */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centra horizontalmente */
+      text-align: center;  /* Centra los textos */
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 1200px; /* Ancho máximo para que no se estire demasiado en PC */
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    h1, h2, p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: white;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #eee;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Bienvenida</h1>
-<p><b>Contenido privado para pacientes</b></p>
-<button onclick="logout()">Cerrar sesión</button>
+<div class="main-container">
+  <h1>Bienvenida</h1>
+  <p><b>Contenido privado para pacientes</b></p>
+  <button onclick="logout()">Cerrar sesión</button>
 
-</br></br>
+  <br><br>
 
-<h2>Rutinas para embarazadas</h2>
+  <h2>Rutinas para embarazadas</h2>
 
-<!-- <ul>
-    <li><a href="https://youtu.be/bBr1b6MS34k?si=ssP333AspIbL0im5">RUTINA DE MOVILIDAD SIN MATERIAL PARA EMBARAZADAS</a></li>
-    <br>
-    <li><a href="https://youtu.be/skaGdOoSOuk?si=XAcJbh8WrtEgUjvK">RUTINA DE ABDOMEN CON GOMA PARA EMBARAZADAS</a></li>
-    <br>
-    <li><a href="https://youtu.be/GHF4wCEBhSE?si=1ATVXlPBu59AUaTJ">RUTINA DE ABDOMEN CON FITBALL PARA EMBARAZADAS</a></li>
-    <br>
-    <li><a href="https://youtu.be/-j1P2hHSBbU?si=mFm2wIRW4XtRu7iT">MOVILIDAD CON FITBALL PARA EMBARAZADAS 15 MINUTOS</a></li>
-</ul> -->
+  <ul style="
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+      gap: 40px; 
+      list-style: none; 
+      padding: 20px 0; 
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+  ">
+    <li style="text-align: center;">
+      <a href="https://youtu.be/bBr1b6MS34k" target="_blank" style="text-decoration: none; color: #222; display: block;">
+        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+          <img src="static/images/01_rutina_movilidad_sin_material_embarazadas.png"
+               alt="Rutina de movilidad sin material para embarazadas"
+               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
+               onmouseover="this.style.transform='scale(1.05)'"
+               onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+          Rutina de movilidad sin material para embarazadas
+        </p>
+      </a>
+    </li>
 
-<ul style="
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-    gap: 40px; 
-    list-style: none; 
-    padding: 20px; 
-    margin: 0 auto;
-    max-width: 1400px; /* Evita que en pantallas gigantes se estire demasiado */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-">
-  <li style="text-align: center;">
-    <a href="https://youtu.be/bBr1b6MS34k" target="_blank" style="text-decoration: none; color: #222; display: block;">
-      <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
-        <img src="static/images/01_rutina_movilidad_sin_material_embarazadas.png"
-             alt="Rutina de movilidad sin material para embarazadas"
-             style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-             onmouseover="this.style.transform='scale(1.05)'"
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
-        Rutina de movilidad sin material para embarazadas
-      </p>
-    </a>
-  </li>
+    <li style="text-align: center;">
+      <a href="https://youtu.be/skaGdOoSOuk" target="_blank" style="text-decoration: none; color: #222; display: block;">
+        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+          <img src="static/images/02_rutina_abdomen_goma_embarazadas.png"
+               alt="Rutina de abdomen con goma para embarazadas"
+               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
+               onmouseover="this.style.transform='scale(1.05)'"
+               onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+          Rutina de abdomen con goma para embarazadas
+        </p>
+      </a>
+    </li>
 
-  <li style="text-align: center;">
-    <a href="https://youtu.be/skaGdOoSOuk" target="_blank" style="text-decoration: none; color: #222; display: block;">
-      <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
-        <img src="static/images/02_rutina_abdomen_goma_embarazadas.png"
-             alt="Rutina de abdomen con goma para embarazadas"
-             style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-             onmouseover="this.style.transform='scale(1.05)'"
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
-        Rutina de abdomen con goma para embarazadas
-      </p>
-    </a>
-  </li>
+    <li style="text-align: center;">
+      <a href="https://youtu.be/GHF4wCEBhSE" target="_blank" style="text-decoration: none; color: #222; display: block;">
+        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+          <img src="static/images/03_rutina_abdomen_fitball_embarazadas.png"
+               alt="Rutina de abdomen con fitball para embarazadas"
+               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
+               onmouseover="this.style.transform='scale(1.05)'"
+               onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+          Rutina de abdomen con fitball para embarazadas
+        </p>
+      </a>
+    </li>
 
-  <li style="text-align: center;">
-    <a href="https://youtu.be/GHF4wCEBhSE" target="_blank" style="text-decoration: none; color: #222; display: block;">
-      <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
-        <img src="static/images/03_rutina_abdomen_fitball_embarazadas.png"
-             alt="Rutina de abdomen con fitball para embarazadas"
-             style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-             onmouseover="this.style.transform='scale(1.05)'"
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
-        Rutina de abdomen con fitball para embarazadas
-      </p>
-    </a>
-  </li>
-
-  <li style="text-align: center;">
-    <a href="https://youtu.be/-j1P2hHSBbU" target="_blank" style="text-decoration: none; color: #222; display: block;">
-      <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
-        <img src="static/images/04_rutina_movilidad_fitball_15_minutos_embarazadas.png"
-             alt="Movilidad con fitball para embarazadas 15 minutos"
-             style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-             onmouseover="this.style.transform='scale(1.05)'"
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
-        Movilidad con fitball para embarazadas (15 min)
-      </p>
-    </a>
-  </li>
-</ul>
-
-
-
-
-<!-- EJEMPLO DE VIDEO -->
-<!-- <iframe width="560" height="315"
-src="https://www.youtube.com/embed/Tncy1DuO2qI?si=WVGL4Dsa2fnr2mz1"
-allowfullscreen></iframe> -->
-
-<!-- <iframe width="560" height="315"
-src="https://www.youtube.com/embed/Tncy1DuO2qI?si=WVGL4Dsa2fnr2mz1"
-allowfullscreen></iframe> -->
+    <li style="text-align: center;">
+      <a href="https://youtu.be/-j1P2hHSBbU" target="_blank" style="text-decoration: none; color: #222; display: block;">
+        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+          <img src="static/images/04_rutina_movilidad_fitball_15_minutos_embarazadas.png"
+               alt="Movilidad con fitball para embarazadas 15 minutos"
+               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
+               onmouseover="this.style.transform='scale(1.05)'"
+               onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+          Movilidad con fitball para embarazadas (15 min)
+        </p>
+      </a>
+    </li>
+  </ul>
+</div>
 
 <!-- 1️⃣ Librería Supabase -->
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>

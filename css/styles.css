@@ -68,7 +68,7 @@ input:focus {
     font-size: 1.1rem;
 }
 
-/* --- GRID DE VÍDEOS --- */
+/* --- GRID DE VÍDEOS (Escritorio) --- */
 .video-grid {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
@@ -77,6 +77,32 @@ input:focus {
     padding: 20px 0; 
     margin: 0;
     width: 100%;
+}
+
+/* --- MODO GALERÍA / SCROLL (Móvil) --- */
+@media (max-width: 600px) {
+    .video-grid {
+        display: flex; /* Cambiamos de grid a flex para ponerlos en fila */
+        overflow-x: auto; /* Permite el scroll horizontal */
+        scroll-snap-type: x mandatory; /* Hace que las imágenes se "ajusten" al centro al deslizar */
+        gap: 20px;
+        padding: 20px;
+        -webkit-overflow-scrolling: touch; /* Suavidad en iOS */
+    }
+
+    .video-card {
+        flex: 0 0 85%; /* Cada tarjeta ocupa el 85% del ancho para que se vea un poco de la siguiente */
+        scroll-snap-align: center; /* Centra la tarjeta al deslizar */
+    }
+
+    /* Ocultar la barra de scroll para que se vea más limpio */
+    .video-grid::-webkit-scrollbar {
+        display: none;
+    }
+    .video-grid {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
 
 .video-card {

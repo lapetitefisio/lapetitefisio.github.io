@@ -1,154 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zona privada</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    /* Estilos para centrar todo el cuerpo */
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Centra horizontalmente */
-      text-align: center;  /* Centra los textos */
-      background-color: #f9f9f9;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .main-container {
-      width: 100%;
-      max-width: 1200px; /* Ancho máximo para que no se estire demasiado en PC */
-      padding: 40px 20px;
-      box-sizing: border-box;
-    }
-
-    h1, h2, p {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    button {
-      cursor: pointer;
-      padding: 10px 20px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      background: white;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #eee;
-    }
-  </style>
 </head>
 <body>
 
-<div class="main-container">
-  <h1>Bienvenida</h1>
-  <p><b>Contenido privado para pacientes</b></p>
-  <button onclick="logout()">Cerrar sesión</button>
-
-  <br><br>
+<div class="dashboard-container">
+  <div class="header-section">
+        <h1>Bienvenida</h1>
+        <p class="subtitle"><b>Contenido privado para pacientes</b></p>
+        <button onclick="logout()" class="btn-logout">Cerrar sesión</button>
+    </div>
 
   <h2>Rutinas para embarazadas</h2>
 
-  <ul style="
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-      gap: 40px; 
-      list-style: none; 
-      padding: 20px 0; 
-      margin: 0 auto;
-      width: 100%;
-      box-sizing: border-box;
-  ">
-    <li style="text-align: center;">
-      <a href="https://youtu.be/bBr1b6MS34k" target="_blank" style="text-decoration: none; color: #222; display: block;">
-        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+  <ul class="video-grid">
+    <li class="video-card">
+      <a href="https://youtu.be/bBr1b6MS34k" target="_blank" class="video-link">
+        <div class="video-thumb-container">
           <img src="static/images/01_rutina_movilidad_sin_material_embarazadas.png"
-               alt="Rutina de movilidad sin material para embarazadas"
-               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-               onmouseover="this.style.transform='scale(1.05)'"
-               onmouseout="this.style.transform='scale(1)'">
+               alt="Rutina de movilidad sin material para embarazadas">
         </div>
-        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+        <p class="video-title">
           Rutina de movilidad sin material para embarazadas
         </p>
       </a>
     </li>
 
-    <li style="text-align: center;">
-      <a href="https://youtu.be/skaGdOoSOuk" target="_blank" style="text-decoration: none; color: #222; display: block;">
-        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+    <li class="video-card">
+      <a href="https://youtu.be/skaGdOoSOuk" target="_blank" class="video-link">
+        <div class="video-thumb-container">
           <img src="static/images/02_rutina_abdomen_goma_embarazadas.png"
-               alt="Rutina de abdomen con goma para embarazadas"
-               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-               onmouseover="this.style.transform='scale(1.05)'"
-               onmouseout="this.style.transform='scale(1)'">
+               alt="Rutina de abdomen con goma para embarazadas">
         </div>
-        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+        <p class="video-title">
           Rutina de abdomen con goma para embarazadas
         </p>
       </a>
     </li>
 
-    <li style="text-align: center;">
-      <a href="https://youtu.be/GHF4wCEBhSE" target="_blank" style="text-decoration: none; color: #222; display: block;">
-        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+    <li class="video-card">
+      <a href="https://youtu.be/GHF4wCEBhSE" target="_blank" class="video-link">
+        <div class="video-thumb-container">
           <img src="static/images/03_rutina_abdomen_fitball_embarazadas.png"
-               alt="Rutina de abdomen con fitball para embarazadas"
-               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-               onmouseover="this.style.transform='scale(1.05)'"
-               onmouseout="this.style.transform='scale(1)'">
+               alt="Rutina de abdomen con fitball para embarazadas">
         </div>
-        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+        <p class="video-title">
           Rutina de abdomen con fitball para embarazadas
         </p>
       </a>
     </li>
 
-    <li style="text-align: center;">
-      <a href="https://youtu.be/-j1P2hHSBbU" target="_blank" style="text-decoration: none; color: #222; display: block;">
-        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+    <li class="video-card">
+      <a href="https://youtu.be/-j1P2hHSBbU" target="_blank" class="video-link">
+        <div class="video-thumb-container">
           <img src="static/images/04_rutina_movilidad_fitball_15_minutos_embarazadas.png"
-               alt="Movilidad con fitball para embarazadas 15 minutos"
-               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-               onmouseover="this.style.transform='scale(1.05)'"
-               onmouseout="this.style.transform='scale(1)'">
+               alt="Movilidad con fitball para embarazadas 15 minutos">
         </div>
-        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+        <p class="video-title">
           Movilidad con fitball para embarazadas (15 min)
         </p>
       </a>
     </li>
 
-    <li style="text-align: center;">
-      <a href="https://youtu.be/TbzPpSf2Y8E?si=rljKOEWijvXGC7R-" target="_blank" style="text-decoration: none; color: #222; display: block;">
-        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+    <li class="video-card">
+      <a href="https://youtu.be/TbzPpSf2Y8E?si=rljKOEWijvXGC7R-" target="_blank" class="video-link">
+        <div class="video-thumb-container">
           <img src="static/images/05_rutina_cardio_adaptado_embarazo_2_y_3_trimestre.png"
-               alt="Cardio adaptado a embarazo segundo y tercer trimestre"
-               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-               onmouseover="this.style.transform='scale(1.05)'"
-               onmouseout="this.style.transform='scale(1)'">
+               alt="Cardio adaptado a embarazo segundo y tercer trimestre">
         </div>
-        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+        <p class="video-title">
           Cardio adaptado a embarazo segundo y tercer trimestre
         </p>
       </a>
     </li>
 
-    <li style="text-align: center;">
-      <a href="https://youtu.be/v1nxt8XLWZM?si=diCpIc_KDQfkIKFU" target="_blank" style="text-decoration: none; color: #222; display: block;">
-        <div style="overflow: hidden; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+    <li class="video-card">
+      <a href="https://youtu.be/v1nxt8XLWZM?si=diCpIc_KDQfkIKFU" target="_blank" class="video-link">
+        <div class="video-thumb-container">
           <img src="static/images/06_rutina_tercer_trimestre_embarazo_movilidad_y_dolor_lumbar.png"
-               alt="Ejercicio tercer trimestre embarazo: movilidad y dolor lumbar"
-               style="width: 100%; height: auto; display: block; transition: transform 0.4s ease;"
-               onmouseover="this.style.transform='scale(1.05)'"
-               onmouseout="this.style.transform='scale(1)'">
+               alt="Ejercicio tercer trimestre embarazo: movilidad y dolor lumbar">
         </div>
-        <p style="margin-top: 20px; font-weight: 700; font-size: 1.3rem; line-height: 1.2;">
+        <p class="video-title">
           Ejercicio tercer trimestre embarazo: movilidad y dolor lumbar
         </p>
       </a>

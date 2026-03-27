@@ -2,18 +2,26 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acceso Pacientes</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="login-body">
 
-<h2>Acceso pacientes</h2>
+  <div class="login-card">
+    <h2>Acceso pacientes</h2>
+    
+    <div class="input-group">
+      <input type="email" id="email" placeholder="Email" required>
+      
+      <input type="password" id="password" placeholder="Contraseña" required 
+            onkeyup="if(event.key === 'Enter') login()">
+    </div>
 
-<input type="email" id="email" placeholder="Email">
-<input type="password" id="password" placeholder="Contraseña">
-<button onclick="login()">Entrar</button>
+    <button onclick="login()" class="btn-primary">Entrar</button>
 
-<p id="error"></p>
+    <p id="error"></p>
+  </div>
 
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 <script src="js/supabase.js"></script>

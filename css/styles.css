@@ -1,0 +1,158 @@
+/* --- CONFIGURACIÓN GLOBAL --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- ESTILOS DE LOGIN (index.html) --- */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* --- ESTILOS DE DASHBOARD (dashboard.html) --- */
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header-section {
+    margin-bottom: 50px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* --- GRID DE VÍDEOS --- */
+.video-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 40px; 
+    list-style: none; 
+    padding: 20px 0; 
+    margin: 0;
+    width: 100%;
+}
+
+.video-card {
+    text-align: center;
+}
+
+.video-link {
+    text-decoration: none; 
+    color: #222; 
+    display: block;
+}
+
+.video-thumb-container {
+    overflow: hidden; 
+    border-radius: 15px; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.video-thumb-container img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    transition: transform 0.4s ease;
+}
+
+.video-thumb-container img:hover {
+    transform: scale(1.05);
+}
+
+.video-title {
+    margin-top: 20px; 
+    font-weight: 700; 
+    font-size: 1.2rem; 
+    line-height: 1.3;
+}
+
+/* --- BOTONES --- */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-logout {
+    display: inline-block;
+    width: auto;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #f8f9fa;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background-color: #ffebee;
+    color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+/* Mensaje de error en login */
+#error {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 15px;
+}
